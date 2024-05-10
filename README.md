@@ -1,19 +1,19 @@
 
 # 1. Introducción a los servidores
 ## 1.1. Iniciar en el mundo de los servidores Linux
-**¿Por qué aprender Linux?**
+### ¿Por qué aprender Linux?
 Los conocimientos en Linux son de los requisitos más demandados.
 
-**¿Qué necesito saber para tomar el curso?**
+### ¿Qué necesito saber para tomar el curso?
 - [*Importante*] Conceptos básicos de ingeniería de software.
 - [*Importante*] Manejo básico de la terminal.
 - [*Opcional*] Saber Shell o Python.
 - [*Opcional*] Conocimiento de redes computacionales.
 
-**¿Linux es poco usado?**
+### ¿Linux es poco usado?
 Falso, 80% de los servidores lo usan, supercomputadoras y casi todos los servidores en la nube.
 
-**¿Qué conocimientos tendré al finalizar el curso?**
+### ¿Qué conocimientos tendré al finalizar el curso?
 - Conocerás los diferentes tipos de servidores.
 - Sabrás los conceptos clave de un sistema Linux.
 - Sabrás administrar de manera básica un servidor Linux.
@@ -60,19 +60,19 @@ y existen muchos mas...
 
 
 ## 1.4. ¿Qué es un sistema Linux/UNIX?
-**¿Qué es un Sistema Operativo?**
+### ¿Qué es un Sistema Operativo?
 
 En la clase anterior exploramos el concepto de servidor y sus distintos tipos. Ahora nos adentraremos en el mundo de los sistemas operativos, empezando por entender qué es un sistema en sí mismo.
 
-**El Kernel: Corazón del Sistema**
+### El Kernel: Corazón del Sistema
 
 El término "Linux" hace referencia al kernel de un sistema operativo. ¿Qué es un kernel? Esencialmente, actúa como el corazón de cualquier sistema operativo, facilitando la comunicación entre el hardware y el software. Es el encargado de coordinar y gestionar los recursos del sistema.
 
-**GNU/Linux: Una Asociación Importante**
+### GNU/Linux: Una Asociación Importante
 
 Los sistemas operativos basados en Linux suelen denominarse "GNU/Linux". "GNU" representa un sistema operativo de software libre que se originó en los años 80. Esta asociación abarca toda la capa de aplicaciones del sistema operativo.
 
-**Distribuciones de Linux**
+### Distribuciones de Linux
 
 Las diferentes versiones de sistemas Linux se conocen como distribuciones. Algunas de las principales son:
 
@@ -82,7 +82,7 @@ Las diferentes versiones de sistemas Linux se conocen como distribuciones. Algun
 
 Cada distribución tiene sus propias características, ventajas y desventajas, algunas son gratuitas mientras que otras requieren pago.
 
-**Diferencia entre Linux y UNIX**
+### Diferencia entre Linux y UNIX
 
 Es común escuchar sobre la diferencia entre sistemas Linux y UNIX. Linux es solo una parte del sistema operativo, mientras que UNIX es un sistema operativo completo. UNIX se desarrolló en 1969 en los Laboratorios Bell de AT&T. Algunas distribuciones de UNIX incluyen FreeBSD y macOS, que utiliza UNIX en parte de su sistema operativo.
 
@@ -90,29 +90,29 @@ Es común escuchar sobre la diferencia entre sistemas Linux y UNIX. Linux es sol
 ![Schema](https://th.bing.com/th/id/R.9f8d748414763d71b990301484601acf?rik=KU1cwoRTqpSw6Q&riu=http%3a%2f%2f2.bp.blogspot.com%2f-XxPkuHH1t04%2fVWqJcnamjdI%2fAAAAAAAAB3I%2fL58rK67EcK4%2fs1600%2fEstructuraUnix.png&ehk=hmjmlxLrOtWbs9%2fq9nMkbcHWbmziCHPzwCGTlq8CV9g%3d&risl=&pid=ImgRaw&r=0)
 
 
-**Capa de Hardware:**
+### Capa de Hardware:
 Es la capa central que abarca todos los dispositivos físicos conectados al sistema, como discos, mouse, memoria, procesador y tarjeta de red.
 
-**Capa de Kernel:**
+### Capa de Kernel:
 Esta capa es la piedra angular del sistema, controlando todo el hardware y facilitando la comunicación con las capas superiores. Regula aspectos como el uso de la memoria RAM y los ciclos del CPU.
 
-**Capa de Shell:**
+### Capa de Shell:
 Interfaz familiar proveniente del curso de terminal, actúa como un puente entre el kernel y las aplicaciones. Permite enviar instrucciones al kernel y recibir información para su procesamiento.
 
-**Capa de Aplicaciones:**
+### Capa de Aplicaciones:
 Es la capa donde interactúa directamente el usuario y los administradores de sistemas. Aquí reside la mayoría del software utilizado, como calculadoras, calendarios, navegadores web y herramientas de utilidad, como comandos para gestionar archivos y realizar copias del sistema.
 
 ## 1.6. Breve historia del software libre y el Open Source
 ![Story line](https://static.platzi.com/media/user_upload/03483589-35105ae1-1941-4ab0-97d7-1871010f7c85.jpg)
 
-**Cuatro libertades del software libre**
+### Cuatro libertades del software libre
 
 - 0 - La libertad de ejecutar el programa.
 - 1 - La libertad de estudiar el funcionamiento del programa y modificarlo.
 - 2 - La libertad de redistribuir.
 - 3 - La libertad de distribuir copias de sus versiones modificadas a otras personas.
 
-**OpenSource**
+### OpenSource
 
 El software de código abierto, también conocido como "opensource", comparte similitudes con el software libre en cuanto a la accesibilidad y la transparencia del código fuente. Sin embargo, mientras que el software libre se centra en las libertades de los usuarios, el código abierto se enfoca más en el desarrollo colaborativo y la disponibilidad pública del código fuente. 
 
