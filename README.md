@@ -1,4 +1,3 @@
-
 # 1. Introducción a los servidores
 ## 1.1. Iniciar en el mundo de los servidores Linux
 ### ¿Por qué aprender Linux?
@@ -123,3 +122,25 @@ Las principales diferencias radican en la filosofía y enfoque:
 - **Licencias:** El software libre generalmente se distribuye bajo licencias que enfatizan las libertades del usuario, como la GPL (Licencia Pública General de GNU), mientras que el código abierto puede utilizar una variedad de licencias que permiten diferentes grados de restricción y colaboración.
 
 A pesar de estas diferencias, ambos enfoques comparten el objetivo de promover la libertad, la accesibilidad y la colaboración en el desarrollo de software.
+
+## 1.7. Sistemas operativos y distribuciones
+### Distribución
+Sistema operativo que interpreta el kernel de Linux, pueden variar en el formato, manejador de paquetes y popularidad.
+
+- **Ubuntu**
+- **Red Hat**
+- **Debian**
+- **FreeBSD**
+
+### Conceptos importantes
+- **LTS (Long Term Support):** Garantiza al menos 5 años de soporte para una distribución.
+- **Non-free Repositories:** Repositorios de software con licencias no aprobadas por la Debian Free Software Foundation.
+
+### Rolling Release vs. Fixed Release:
+**Rolling Release:** Actualizaciones continuas con el riesgo de inestabilidad, se publican al momento de desarrollarse (Arch Linux, Gentoo-based).
+- Ventajas: Actualizaciones frecuentes, estabilidad en distribuciones basadas en Red Hat.
+- Desventajas: Riesgo de inestabilidad, especialmente en nuevas versiones.
+
+**Fixed Release:** Versiones más estables con actualizaciones probadas y garantizadas (Ubuntu).
+- Ventajas: Mayor estabilidad y menos bugs debido a actualizaciones probadas.
+- Desventajas: Menos frecuencia de actualizaciones, especialmente en distribuciones gratuitas.
