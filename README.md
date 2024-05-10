@@ -90,16 +90,16 @@ Es común escuchar sobre la diferencia entre sistemas Linux y UNIX. Linux es sol
 ![Schema](https://th.bing.com/th/id/R.9f8d748414763d71b990301484601acf?rik=KU1cwoRTqpSw6Q&riu=http%3a%2f%2f2.bp.blogspot.com%2f-XxPkuHH1t04%2fVWqJcnamjdI%2fAAAAAAAAB3I%2fL58rK67EcK4%2fs1600%2fEstructuraUnix.png&ehk=hmjmlxLrOtWbs9%2fq9nMkbcHWbmziCHPzwCGTlq8CV9g%3d&risl=&pid=ImgRaw&r=0)
 
 
-### Capa de Hardware:
+**Capa de Hardware:**
 Es la capa central que abarca todos los dispositivos físicos conectados al sistema, como discos, mouse, memoria, procesador y tarjeta de red.
 
-### Capa de Kernel:
+**Capa de Kernel:**
 Esta capa es la piedra angular del sistema, controlando todo el hardware y facilitando la comunicación con las capas superiores. Regula aspectos como el uso de la memoria RAM y los ciclos del CPU.
 
-### Capa de Shell:
+**Capa de Shell:**
 Interfaz familiar proveniente del curso de terminal, actúa como un puente entre el kernel y las aplicaciones. Permite enviar instrucciones al kernel y recibir información para su procesamiento.
 
-### Capa de Aplicaciones:
+**Capa de Aplicaciones:**
 Es la capa donde interactúa directamente el usuario y los administradores de sistemas. Aquí reside la mayoría del software utilizado, como calculadoras, calendarios, navegadores web y herramientas de utilidad, como comandos para gestionar archivos y realizar copias del sistema.
 
 ## 1.6. Breve historia del software libre y el Open Source
