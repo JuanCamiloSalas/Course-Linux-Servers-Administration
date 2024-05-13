@@ -158,5 +158,12 @@ Sistema operativo que interpreta el kernel de Linux, pueden variar en el formato
 ### Instalación directa
 Se instala un sistema operativo para ocupar el 100% de los recursos dedicados (software y hardware) ya sea a un solo servicio o varios.
 
-## Virtualización
-Se instala un software que sirve como host conocido como (**hypervisor**) que administra los recursos para crear múltilpes **guests**.
+### Virtualización
+Se instala un software que sirve como host conocido como (**hypervisor**) que administra los recursos para crear múltilpes **guests** o versiones virtualizadas.
+
+**Tipos de Hypervisor:**
+
+- Tipo 1 (Bare-metal): Sobre la capa de hardware se monta directamente el hypervisor. (No requiere sistema operativo, se ejecuta directamente en una máquina virtualizada por el hypervisor.)
+- Tipo 2: Es más acccesible, sobre el hardware se monta un SO, luego se ejecuta el hypervisor.
+
+Dato curioso: VirtualBox es lo que se denominaría como Hypervisor.
