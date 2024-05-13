@@ -144,3 +144,19 @@ Sistema operativo que interpreta el kernel de Linux, pueden variar en el formato
 **Fixed Release:** Versiones más estables con actualizaciones probadas y garantizadas (Ubuntu).
 - Ventajas: Mayor estabilidad y menos bugs debido a actualizaciones probadas.
 - Desventajas: Menos frecuencia de actualizaciones, especialmente en distribuciones gratuitas.
+
+## 1.8. ¿Dónde viven nuestros servidores?
+**On premise:** Todo el hardware y software del servidor es alojado y mantenido por la organización. Cloud
+
+**Nube Pública:** Son todos los proveedores de servicios que otorgan recursos de hardware y software para montar los servidores, tales como Google cloud, Azure, AWS, entre otros.
+
+**Nube Privada:** Todos los recursos y software pueden vivir en otro lado pero ningún recurso o servicio se comparte con otra empresa para tener un mayor grado de seguridad. 
+
+**Hybrid (Nube Híbrida):** Es una combinación de servicios on premise y cloud.
+
+## 1.9. Formas de montar un servidor
+### Instalación directa
+Se instala un sistema operativo para ocupar el 100% de los recursos dedicados (software y hardware) ya sea a un solo servicio o varios.
+
+## Virtualización
+Se instala un software que sirve como host conocido como (**hypervisor**) que administra los recursos para crear múltilpes **guests**.
