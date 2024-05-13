@@ -167,3 +167,5 @@ Se instala un software que sirve como host conocido como (**hypervisor**) que ad
 - Tipo 2: Es más acccesible, sobre el hardware se monta un SO, luego se ejecuta el hypervisor.
 
 Dato curioso: VirtualBox es lo que se denominaría como Hypervisor.
+
+![schema](https://miro.medium.com/v2/resize:fit:700/1*0tuVhpzOB-NHLeTjXtBDBw.png)
