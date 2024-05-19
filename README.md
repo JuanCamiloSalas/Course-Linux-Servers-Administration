@@ -169,3 +169,30 @@ Se instala un software que sirve como host conocido como (**hypervisor**) que ad
 Dato curioso: VirtualBox es lo que se denominaría como Hypervisor.
 
 ![schema](https://miro.medium.com/v2/resize:fit:700/1*0tuVhpzOB-NHLeTjXtBDBw.png)
+
+# Configuración básica de un servidor remoto
+Comandos: 
+
+- **ssh:** lo usamos para confirmar que tengamos instalado openssh en el sistema, en caso de no estar instalado podemos instalarlo con el comando:
+
+`sudo apt install openssh`
+
+Para el caso de ubuntu server, o para el caso de RHEL con el comando:
+
+`sudo dnf install openssh`
+
+- **systemctl status sshd:** Para verificar que el proceso de ssh este activo y corriendo en el sistema (si no les funcione agréguenle la palabra sudo al principio del comando para abrirlo con permisos de superusuario).
+
+- **ip address:** Nos da datos sobre nuestros dispositivos de red, incluyendo la IP interna del servidor.
+
+Ahora, para conectarse al servidor desde un dispositivo en la misma red, se puede usar el comando:
+
+`ssh username@localip`
+
+Desde la PowerShell de Windows o la consola del sistema operativo que estés usando.
+
+Nota: En caso de querer acceder remotamente a un servidor, el comando es el mismo, solo que ahora en vez de usar la ip local se usaría la IP pública, la cual se puede ver desde un navegador en internet buscando myip estando conectado a la misma red del servidor o desde el servidor usando algún comando como lo puede ser el siguiente:
+
+`curl ifconfig.me`
+
+Es importante tener en cuenta que para poder tener este acceso, se debe tener abierto a la red el puerto de internet número 22, adicionalmente es una buena práctica utilizar un firewall para que solo ciertas IPs puedan conectarse al servidor y así evitar accesos no autorizados.
