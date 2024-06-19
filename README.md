@@ -239,14 +239,14 @@ Las particiones en un servidor Linux son divisiones lógicas del espacio de alma
 ### Comando más usados
 Comando	   | Descripción                                                       |
 |----------|-------------------------------------------------------------------|
-`lsblk	 ` | Lista los dispositivos de bloques y las particiones en el sistema |
-`fdisk	 ` | Herramienta para administrar particiones de disco                 |
-`parted	 ` | Herramienta para crear y administrar particiones de disco         |
-`mkfs	 ` | Formatea una partición con un sistema de archivos                 |
-`mount	 ` | Monta un sistema de archivos en una partición o un directorio     |
-`umount	 ` | Desmonta un sistema de archivos                                   |
-`df	     ` | Muestra el espacio libre y utilizado en las particiones montadas  |
-`du	     ` | Muestra el tamaño de un archivo o directorio                      |
+`lsblk`    | Lista los dispositivos de bloques y las particiones en el sistema |
+`fdisk`    | Herramienta para administrar particiones de disco                 |
+`parted`   | Herramienta para crear y administrar particiones de disco         |
+`mkfs`     | Formatea una partición con un sistema de archivos                 |
+`mount`    | Monta un sistema de archivos en una partición o un directorio     |
+`umount`   | Desmonta un sistema de archivos                                   |
+`df`       | Muestra el espacio libre y utilizado en las particiones montadas  |
+`du`       | Muestra el tamaño de un archivo o directorio                      |
 `resize2f` | Ajusta el tamaño de un sistema de archivos ext2, ext3 o ext4      |
 `lvcreate` | Crea un volumen lógico en un grupo de volúmenes LVM               |
 `lvextend` | Amplía el tamaño de un volumen lógico                             |
