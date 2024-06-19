@@ -170,7 +170,7 @@ Dato curioso: VirtualBox es lo que se denominaría como Hypervisor.
 
 ![schema](https://miro.medium.com/v2/resize:fit:700/1*0tuVhpzOB-NHLeTjXtBDBw.png)
 
-# Configuración básica de un servidor remoto
+# 2. Configuración básica de un servidor remoto
 Comandos: 
 
 - **ssh:** lo usamos para confirmar que tengamos instalado openssh en el sistema, en caso de no estar instalado podemos instalarlo con el comando:
@@ -196,3 +196,66 @@ Nota: En caso de querer acceder remotamente a un servidor, el comando es el mism
 `curl ifconfig.me`
 
 Es importante tener en cuenta que para poder tener este acceso, se debe tener abierto a la red el puerto de internet número 22, adicionalmente es una buena práctica utilizar un firewall para que solo ciertas IPs puedan conectarse al servidor y así evitar accesos no autorizados.
+
+# 3. Sistemas de archivos y particionamiento
+## ¿Qué son los sistemas de archivos?
+Un sistema de archivos es un método que utiliza un sistema operativo para organizar y gestionar datos en un disco o unidad de almacenamiento. Sus funciones principales incluyen:
+
+1. **Organización de Datos**: Permite almacenar datos en archivos y directorios (carpetas).
+2. **Gestión del Espacio**: Administra el espacio del disco, asignando y liberando bloques según sea necesario.
+3. **Acceso y Seguridad**: Controla quién puede acceder a los archivos y qué pueden hacer con ellos.
+4. **Recuperación de Datos**: Facilita la recuperación de datos en caso de errores o fallos.
+
+### Tipos Comunes de Sistemas de Archivos
+- **FAT32**: Común en unidades flash, con limitaciones en el tamaño de archivos y particiones.
+- **NTFS**: Usado por Windows, soporta grandes archivos y tiene características avanzadas de seguridad.
+- **HFS+** y **APFS**: Usados por macOS, optimizados para almacenamiento moderno.
+- **ext4**: Utilizado en Linux, conocido por su eficiencia y fiabilidad.
+
+En resumen, un sistema de archivos organiza, gestiona y asegura los datos en una unidad de almacenamiento, facilitando el acceso y la recuperación de los mismos.
+
+![Comparativa](https://static.platzi.com/media/user_upload/sistemadearchivos-a9552368-750e-48a8-ad0c-ea85c380b05b.jpg)
+
+## Particiones de un Servidor Linux
+Las particiones en un servidor Linux son divisiones lógicas del espacio de almacenamiento en un disco. Cada partición puede albergar un sistema de archivos distinto y se utiliza para organizar y gestionar los datos de manera eficiente. Aquí tienes una explicación sencilla y los aspectos más importantes:
+
+- **¿Qué es una Partición?** Es una sección separada del disco duro que puede contener un sistema de archivos independiente. Piensa en ellas como divisiones dentro de una misma bodega, donde cada sección almacena distintos tipos de productos.
+- **¿Por Qué Particionar?** Las particiones ayudan a organizar los datos, mejorar el rendimiento y la seguridad del sistema, y facilitar la recuperación en caso de fallo.
+
+### Particiones Comunes en un Servidor Linux
+- `/root:` Contiene el sistema operativo y la mayoría de los archivos del sistema. Es esencial para el funcionamiento de Linux.
+- `/boot:` Almacena los archivos necesarios para el arranque del sistema, como el kernel de Linux y los archivos de configuración del gestor de arranque.
+- `/home:` Guarda los archivos personales de los usuarios. Tenerla en una partición separada facilita el mantenimiento y las actualizaciones del sistema.
+- `/var:` Contiene archivos variables como registros del sistema, colas de impresión, y archivos de datos temporales. Es importante para servidores web y de bases de datos.
+- `/tmp:` Utilizada para almacenar archivos temporales. Limitar el tamaño de esta partición puede evitar que archivos temporales llenen el disco principal.
+- `swap:` No es una partición de sistema de archivos, sino un espacio de intercambio utilizado como memoria virtual para el sistema. Es crucial para el rendimiento cuando la memoria RAM se agota.
+
+### Aspectos Importantes
+- **Tamaño Adecuado:** Asignar el tamaño correcto a cada partición es crucial. Demasiado pequeño puede causar problemas de espacio, y demasiado grande puede ser un desperdicio de recursos.
+- **Seguridad y Recuperación:** Tener particiones separadas ayuda a contener los daños en caso de fallos del sistema. Por ejemplo, si algo sale mal en /home, no afectará a /var.
+- **Mantenimiento y Actualización:** Las particiones separadas facilitan las actualizaciones del sistema y el mantenimiento, ya que puedes reinstalar el sistema operativo sin afectar los datos de los usuarios en /home.
+- **Rendimiento:** Las particiones pueden mejorar el rendimiento del sistema al reducir la fragmentación y permitir un acceso más rápido a archivos específicos.
+
+### Comando más usados
+Comando	   | Descripción                                                       |
+|----------|-------------------------------------------------------------------|
+`lsblk	 ` | Lista los dispositivos de bloques y las particiones en el sistema |
+`fdisk	 ` | Herramienta para administrar particiones de disco                 |
+`parted	 ` | Herramienta para crear y administrar particiones de disco         |
+`mkfs	 ` | Formatea una partición con un sistema de archivos                 |
+`mount	 ` | Monta un sistema de archivos en una partición o un directorio     |
+`umount	 ` | Desmonta un sistema de archivos                                   |
+`df	     ` | Muestra el espacio libre y utilizado en las particiones montadas  |
+`du	     ` | Muestra el tamaño de un archivo o directorio                      |
+`resize2f` | Ajusta el tamaño de un sistema de archivos ext2, ext3 o ext4      |
+`lvcreate` | Crea un volumen lógico en un grupo de volúmenes LVM               |
+`lvextend` | Amplía el tamaño de un volumen lógico                             |
+`lvresize` | Ajusta el tamaño de un volumen lógico                             |
+`lvremove` | Elimina un volumen lógico                                         |
+`vgcreate` | Crea un grupo de volúmenes LVM                                    |
+`vgextend` | Amplía un grupo de volúmenes LVM                                  |
+`vgreduce` | Reduce un grupo de volúmenes LVM                                  |
+`pvcreate` | Crea un volumen físico LVM en una partición o dispositivo         |
+`pvextend` | Amplía un volumen físico LVM                                      |
+`pvresize` | Ajusta el tamaño de un volumen físico LVM                         |
+`pvremove` | Elimina un volumen físico LVM                                     |
