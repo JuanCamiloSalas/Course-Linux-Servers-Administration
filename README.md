@@ -223,7 +223,7 @@ Las particiones en un servidor Linux son divisiones lógicas del espacio de alma
 - **¿Por Qué Particionar?** Las particiones ayudan a organizar los datos, mejorar el rendimiento y la seguridad del sistema, y facilitar la recuperación en caso de fallo.
 
 ### Particiones Comunes en un Servidor Linux
-- `/root:` Contiene el sistema operativo y la mayoría de los archivos del sistema. Es esencial para el funcionamiento de Linux.
+- `/:` Contiene el sistema operativo y la mayoría de los archivos del sistema. Es esencial para el funcionamiento de Linux.
 - `/boot:` Almacena los archivos necesarios para el arranque del sistema, como el kernel de Linux y los archivos de configuración del gestor de arranque.
 - `/home:` Guarda los archivos personales de los usuarios. Tenerla en una partición separada facilita el mantenimiento y las actualizaciones del sistema.
 - `/var:` Contiene archivos variables como registros del sistema, colas de impresión, y archivos de datos temporales. Es importante para servidores web y de bases de datos.
