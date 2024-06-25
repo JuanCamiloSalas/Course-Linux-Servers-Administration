@@ -259,3 +259,5 @@ Comando	   | Descripción                                                       
 `pvextend` | Amplía un volumen físico LVM                                      |
 `pvresize` | Ajusta el tamaño de un volumen físico LVM                         |
 `pvremove` | Elimina un volumen físico LVM                                     |
+
+## Swap
