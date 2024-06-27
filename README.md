@@ -189,7 +189,7 @@ Ahora, para conectarse al servidor desde un dispositivo en la misma red, se pued
 
 `ssh username@localip`
 
-Desde la PowerShell de Windows o la consola del sistema operativo que estés usando.
+Desde la PowerShell de Windows o la consola del sistema operativo que se esté usando.
 
 Nota: En caso de querer acceder remotamente a un servidor, el comando es el mismo, solo que ahora en vez de usar la ip local se usaría la IP pública, la cual se puede ver desde un navegador en internet buscando myip estando conectado a la misma red del servidor o desde el servidor usando algún comando como lo puede ser el siguiente:
 
@@ -236,7 +236,7 @@ Las particiones en un servidor Linux son divisiones lógicas del espacio de alma
 - **Mantenimiento y Actualización:** Las particiones separadas facilitan las actualizaciones del sistema y el mantenimiento, ya que puedes reinstalar el sistema operativo sin afectar los datos de los usuarios en /home.
 - **Rendimiento:** Las particiones pueden mejorar el rendimiento del sistema al reducir la fragmentación y permitir un acceso más rápido a archivos específicos.
 
-### Comando más usados
+### Comandos más usados
 Comando	   | Descripción                                                       |
 |----------|-------------------------------------------------------------------|
 `lsblk`    | Lista los dispositivos de bloques y las particiones en el sistema |
@@ -259,3 +259,50 @@ Comando	   | Descripción                                                       
 `pvextend` | Amplía un volumen físico LVM                                      |
 `pvresize` | Ajusta el tamaño de un volumen físico LVM                         |
 `pvremove` | Elimina un volumen físico LVM                                     |
+
+## Memoria Swap
+La memoria swap es una parte del almacenamiento del disco que el sistema operativo utiliza como memoria virtual cuando la memoria RAM está llena. Ayuda a mantener el sistema funcionando correctamente, permitiendo que se muevan datos inactivos de la RAM al swap para liberar espacio.
+
+La memoria swap en Linux puede configurarse tanto como un archivo de intercambio (swap file) como una partición de intercambio (swap partition).
+
+### Cómo crear una memoria swap (swap file):
+
+1. Mover al ROOT (/)
+
+    `cd /`
+
+1. Confirmar si existe un archivo swap actualmente
+
+    `ls -lh`
+
+1. Ver la cantidad de memoria disponible
+
+    `free -h`
+
+1. Ver si hay suficiente espacio en disco para aumentar la particion swap actual o crear una nueva
+
+    `df -h`
+
+1. Crear un archivo especial para la memoria swap
+
+    `sudo fallocate -l 2G /swapfile`
+
+1. Configurar permisos para que solo el root acceda a este archivo en lectura y escritura
+
+    `sudo chmod 600 /swapfile`
+
+1. Confirmar que existe el archivo swap creado
+
+    `ls -lh`
+
+1. Convertir el archivo swap creado en un archivo swap válido
+
+    `sudo mkswap /swapfile`
+
+1. Configurar el fstab
+
+    `sudo vim /etc/fstab`
+
+1. Escribir nueva línea en el archivo fstab
+
+    `/swapfile swap swap defaults 0 0`
